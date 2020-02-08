@@ -4,6 +4,8 @@
     "displayName": "Ludred States",
     "description" : "A simple implementation of the \"state\" design patter with editor visualization and pushdown automata implementation",
     "unity" : "2019.3",
+    "dependencies": {
+    },
     "keywords": [
         "state",
         "pattern",
