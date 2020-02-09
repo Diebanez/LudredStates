@@ -1,0 +1,17 @@
+{
+    "name": "Ludred.States.Editor",
+    "references": [
+        "GUID:e4b2a7549e6dc6948a2bba2343a200d9"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -42,7 +42,7 @@ public class State
     public State()
     {
         Name = "New State";
-        m_Behaviours = new StateBehaviour[]{new TestBehaviour()};
+        m_Behaviours = new StateBehaviour[0];
     }
     #endregion
 
@@ -75,6 +75,30 @@ public class State
                 m_Behaviours[i] = m_Behaviours[i + 1];
             }
             Array.Resize(ref m_Behaviours, m_Behaviours.Length - 1);
+        }
+    }
+
+    public void EnterState()
+    {
+        foreach (var behaviour in Behaviours)
+        {
+            behaviour.OnStateEnter();
+        }
+    }
+
+    public void UpdateState()
+    {
+        foreach (var behaviour in Behaviours)
+        {
+            behaviour.OnStateUpdate();
+        }
+    }
+
+    public void ExitState()
+    {
+        foreach (var behaviour in Behaviours)
+        {
+            behaviour.OnStateExit();
         }
     }
     #endregion
