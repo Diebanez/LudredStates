@@ -13,7 +13,7 @@ public class State
     /// <summary>
     /// The list of <see cref="StateBehaviour"/> attached to this state
     /// </summary>
-    private StateBehaviour[] m_Behaviours;
+    public StateBehaviour[] m_Behaviours;
     #endregion
 
     #region Public Fields
@@ -21,6 +21,11 @@ public class State
     /// The position in the editor window of this state
     /// </summary>
     public Vector2 StateEditorPosition;
+
+    /// <summary>
+    /// The name the state
+    /// </summary>
+    public string Name;
     #endregion
 
     #region Properties
@@ -36,7 +41,8 @@ public class State
     /// </summary>
     public State()
     {
-        m_Behaviours = new StateBehaviour[0];
+        Name = "New State";
+        m_Behaviours = new StateBehaviour[]{new TestBehaviour()};
     }
     #endregion
 

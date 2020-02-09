@@ -9,6 +9,8 @@ namespace Ludred.States
 /// </summary>
 public class FiniteStateMachineComponent : MonoBehaviour
 {
-    
+    [SerializeField] private FiniteStateMachineProfile m_Profile;
+
+    public FiniteStateMachineProfile Profile => m_Profile;
 }
 }

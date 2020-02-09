@@ -6,11 +6,12 @@ namespace Ludred.States
 /// <summary>
 /// Scriptable Object which define the structure of a finite state machine, made up from <see cref="StateBehaviour"/>
 /// </summary>
+[CreateAssetMenu(menuName = "Ludred/State Machine Profile")]
 public class FiniteStateMachineProfile : ScriptableObject
 {
-    private string[] m_Triggers = new string[0];
-    private State[] m_States = new State[0];
-    private StateTransition[] m_Transitions = new StateTransition[0];
+    public string[] m_Triggers = new string[0];
+    public State[] m_States = new State[0];
+    public StateTransition[] m_Transitions = new StateTransition[0];
 
     public string[] Triggers => m_Triggers;
     public State[] States => m_States;
