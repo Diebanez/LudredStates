@@ -78,27 +78,35 @@ public class State
         }
     }
 
-    public void EnterState()
+    public void EnterState(FiniteStateMachineComponent component)
     {
         foreach (var behaviour in Behaviours)
         {
-            behaviour.OnStateEnter();
+            behaviour.OnStateEnter(component, this);
         }
     }
 
-    public void UpdateState()
+    public void UpdateState(FiniteStateMachineComponent component)
     {
         foreach (var behaviour in Behaviours)
         {
-            behaviour.OnStateUpdate();
+            behaviour.OnStateUpdate(component, this);
         }
     }
 
-    public void ExitState()
+    public void ExitState(FiniteStateMachineComponent component)
     {
         foreach (var behaviour in Behaviours)
         {
-            behaviour.OnStateExit();
+            behaviour.OnStateExit(component, this);
+        }
+    }
+
+    public void DrawGizmos(FiniteStateMachineComponent component)
+    {
+        foreach (var behaviour in Behaviours)
+        {
+            behaviour.OnUpdateDrawGizmos(component, this);
         }
     }
     #endregion

@@ -46,6 +46,13 @@ public class FiniteStateMachineProfile : ScriptableObject
         }
     }
 
+    public bool HasTrigger(string triggerName)
+    {
+        if (Array.Exists(m_Triggers, element => element == triggerName))
+            return true;
+        return false;
+    }
+
     public State AddState()
     {
          Array.Resize(ref m_States, m_States.Length + 1);

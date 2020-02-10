@@ -17,21 +17,21 @@ public class TestStateBehaviour : StateBehaviour
         Exited = false;
     }
 
-    public override void OnStateEnter()
+    public override void OnStateEnter(FiniteStateMachineComponent component, State state)
     {
-        base.OnStateEnter();
+        base.OnStateEnter(component, state);
         Entered = true;
     }
 
-    public override void OnStateUpdate()
+    public override void OnStateUpdate(FiniteStateMachineComponent component, State state)
     {
-        base.OnStateUpdate();
+        base.OnStateUpdate(component, state);
         Updated++;
     }
 
-    public override void OnStateExit()
+    public override void OnStateExit(FiniteStateMachineComponent component, State state)
     {
-        base.OnStateExit();
+        base.OnStateExit(component, state);
         Exited = true;
     }
 }

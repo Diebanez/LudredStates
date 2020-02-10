@@ -96,7 +96,7 @@ namespace Tests
                 Assert.True(!((TestStateBehaviour)state.Behaviours[i]).Entered);
             }
             
-            state.EnterState();
+            state.EnterState(null);
             
             for (int i = 0; i < behaviourTestNumber; i++)
             {
@@ -125,7 +125,7 @@ namespace Tests
 
             for (int i = 0; i < cycles; i++)
             {
-                state.UpdateState();
+                state.UpdateState(null);
             }
 
             for (int i = 0; i < behaviourTestNumber; i++)
@@ -151,7 +151,7 @@ namespace Tests
                 Assert.True(!((TestStateBehaviour)state.Behaviours[i]).Exited);
             }
             
-            state.ExitState();
+            state.ExitState(null);
             
             for (int i = 0; i < behaviourTestNumber; i++)
             {
